@@ -1,0 +1,43 @@
+{
+    "layers": [
+        {
+            "name": "Background",
+            "values": ["Blue", "Red", "Green"],
+            "trait_path": "./layers/Backgrounds",
+            "filename": ["BLUE", "RED", "GREEN"],
+            "weights": [30, 45, 15]
+        },
+        {
+            "name": "Accessory",
+            "values": ["Accessory 1"],
+            "trait_path": "./layers/Accessory",
+            "filename": ["ACCESSORY1"],
+            "layer_nb": 1,
+            "weights": [100]
+        },
+        {
+            "name": "Person",
+            "values": ["Person 1", "Person 2"],
+            "trait_path": "./layers/Person",
+            "filename": ["PERSON1", "PERSON2"],
+            "layer_nb": 1,
+            "weights": [100]
+        }
+    ],
+    "conditions": [
+        {
+            "layer": "Background",
+            "value": "Green",
+            "incompatible_with": ["Accessory 1"]
+        }
+    ],
+    "cluster": [
+        {
+            "guidance_layer": "Background",
+            "targetted_layers" : "Person"
+        }
+    ],
+    "baseURI": ".",
+    "name": "NFT #",
+    "description": "Description of your Collection"
+}
